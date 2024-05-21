@@ -15,6 +15,7 @@ exports.signup = async (data) => {
         });
 
         return await user.save();
+        
     } catch (error) {
         console.error('Error during user signup:', error);
         throw new Error('Signup failed.');

@@ -3,10 +3,11 @@ const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const authRoutes = require('./routes/auth')
+const authRoutes = require('./routes/auth');
+const petRoutes = require('./routes/pet');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -18,14 +19,18 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.json());
+
 app.use('/auth', authRoutes);
+app.use('/pet', petRoutes);
 
 app.use((error, req, res, next) => {
   console.error("Unhandled exception:", error);
   const message = error.message;
   const data = error.data;
-  res.status(500).json({ message: message, data: data });
+  res.status(error.statusCode || 500).json({ message: message, data: data });
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
