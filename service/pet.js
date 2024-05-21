@@ -27,3 +27,8 @@ exports.getAllPets = async () => {
         throw new Error('Could not find any pet!');
     }
 };
+
+exports.deletePet = async (petId) => {
+    return Pet.findByIdAndDelete(petId);
+};
+

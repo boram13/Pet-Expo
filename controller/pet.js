@@ -27,3 +27,16 @@ exports.getAllPets = async (req, res, next) => {
   }
 };
 
+exports.deletePet = async (req, res) => {
+
+  const { id } = req.params;
+
+  try {
+    await petService.deletePet(id);
+    res.status(200).json({ message: 'Pet deleted successfully' });
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ message: 'Failed to delete pet', error });
+  }
+};
+

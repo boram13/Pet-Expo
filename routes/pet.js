@@ -5,8 +5,12 @@ const { query, body, param } = require('express-validator');
 
 const router = express.Router();
 
-router.post('/create', petController.createPet);
+router.post('', petController.createPet);
 
-router.get('/get', petController.getAllPets);
+router.get('', petController.getAllPets);
+
+// router.update('/:petId', petController.updatePet);
+
+router.delete('/:id', petController.deletePet);
 
 module.exports = router;

@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 app.use('/auth', authRoutes);
-app.use('/pet', petRoutes);
+app.use('/pets', petRoutes);
 
 app.use((error, req, res, next) => {
   console.error("Unhandled exception:", error);
