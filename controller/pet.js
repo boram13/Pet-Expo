@@ -40,3 +40,16 @@ exports.deletePet = async (req, res) => {
   }
 };
 
+exports.updatePet = async (req, res) => {
+
+  const { name, photo, origin, type } = req.body;
+  const { id } = req.params;
+
+  try {
+    const updatedPet = await petService.updatePet( id, name, photo, origin, type );
+    res.status(200).json({ message: 'Pet is successfully updates', pet: updatedPet });
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to update', error: error.message });
+  }
+};
+

@@ -9,7 +9,7 @@ router.post('', petController.createPet);
 
 router.get('', petController.getAllPets);
 
-// router.update('/:petId', petController.updatePet);
+router.put('/:id', petController.updatePet);
 
 router.delete('/:id', petController.deletePet);
 

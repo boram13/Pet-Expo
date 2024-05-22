@@ -32,3 +32,18 @@ exports.deletePet = async (petId) => {
     return Pet.findByIdAndDelete(petId);
 };
 
+exports.updatePet = async (id, name, photo, origin, type) => {
+    const pet = await Pet.findById(id);
+
+    if (!pet) {
+        throw new Error('Pet not found');
+    }
+    
+   pet.name = name;
+   pet.photo = photo;
+   pet.origin = origin;
+   pet.type = type;
+   
+    return await pet.save();
+};
+
