@@ -5,6 +5,10 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/auth');
 const petRoutes = require('./routes/pet');
+const catsRoutes = require('./routes/cat');
+const dogsRoutes = require('./routes/dog');
+const birdsRoutes = require('./routes/bird');
+
 
 const app = express();
 const PORT = process.env.PORT || 3000
@@ -25,6 +29,9 @@ app.use(express.json());
 
 app.use('/auth', authRoutes);
 app.use('/pets', petRoutes);
+app.use('/cats', catsRoutes);
+app.use('/dogs', dogsRoutes);
+app.use('/birds', birdsRoutes);
 
 app.use((error, req, res, next) => {
   console.error("Unhandled exception:", error);
