@@ -1,12 +1,13 @@
+const { query } = require('express');
 const petService = require('../service/pet');
 
 exports.createPet = async (req, res, next) => {
   try {
     const { photo, name, origin, type } = req.body;
 
- if (!photo || !name || !origin || !type) {
-  return res.status(400).json({ error: 'Photo, name, and origin are required' });
-}
+    if (!photo || !name || !origin || !type) {
+      return res.status(400).json({ error: 'Photo, name, and origin are required' });
+    }
 
     const pet = await petService.createPet(photo, name, origin, type);
     res.status(201).json(pet);
@@ -18,9 +19,12 @@ exports.createPet = async (req, res, next) => {
 }
 
 exports.getAllPets = async (req, res, next) => {
+
+  const { name } = req.query;
+
   try {
-    const result = await petService.getAllPets(); 
-    res.json(result); 
+    const result = await petService.getAllPets(name);
+    res.json(result);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch pets' });
     next(error);

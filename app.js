@@ -11,7 +11,7 @@ const birdsRoutes = require('./routes/bird');
 
 
 const app = express();
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4002
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -43,8 +43,8 @@ app.use((error, req, res, next) => {
 app.use(express.static(path.join(__dirname, 'public')));
 
 mongoose.connect('mongodb+srv://bm200000:bm200000@cluster0.h5tix4x.mongodb.net/')
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('Error connecting to MongoDB:', err));
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('Error connecting to MongoDB:', err));
 
 
 app.listen(PORT, () => {

@@ -18,12 +18,16 @@ exports.createPet = async (photo, name, origin, type) => {
         throw new Error('Failed to create pet: ' + error.message);
     }
 };
-exports.getAllPets = async (type) => { // type parameter tek get
-    try {//do kaloj param si filter, kte filter e mar si querry
+exports.getAllPets = async (type, name) => {
+    try {
         let query = {};
-        if(type){
+        if (type) {
             query.type = type;
         }
+        if (name) {
+            query.name = name;
+        }
+
         const pets = await Pet.find(query);
         const total = await Pet.countDocuments(query);
         return { pets, total };
@@ -42,12 +46,12 @@ exports.updatePet = async (id, name, photo, origin, type) => {
     if (!pet) {
         throw new Error('Pet not found');
     }
-    
-   pet.name = name;
-   pet.photo = photo;
-   pet.origin = origin;
-//    pet.type = type;
-   
+
+    pet.name = name;
+    pet.photo = photo;
+    pet.origin = origin;
+    //    pet.type = type;
+
     return await pet.save();
 };
 

@@ -18,8 +18,11 @@ exports.createDogs = async (req, res, next) => {
   };
   
   exports.getAllDogs = async (req, res, next) => {// do kaloj type
+
+    const { name } = req.query;
+
     try {
-      const result = await petService.getAllPets('dog'); 
+      const result = await petService.getAllPets('dog', name); 
       res.json(result);
     } catch (error) {
       res.status(500).json({ error: 'Failed to fetch dogs' });

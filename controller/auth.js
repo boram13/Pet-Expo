@@ -21,7 +21,7 @@ exports.signup = async (req, res, next) => {
       surname: req.body.surname,
       role: req.body.role
     };
-    
+
     const result = await authService.signup(inputData);
     const token = jwt.sign({ email: result.email }, secretKey, { expiresIn: "2h" });
 

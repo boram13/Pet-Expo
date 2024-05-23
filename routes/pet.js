@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('', isAuth, petController.createPet);
 
-router.get('', isAuth, petController.getAllPets);
+router.get('/', isAuth, petController.getAllPets);
 
 router.put('/:id', isAuth, petController.updatePet);
 
