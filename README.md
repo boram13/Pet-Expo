@@ -75,4 +75,6 @@ npm install
 npm run start
 `
 
+`If you want to test the routes in Postman, Postman requests are available in collection.json file under the postman folder `
+
 

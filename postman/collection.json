@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "a6773250-ac20-4a72-8aba-a09010b1b358",
+		"name": "Pet-Expo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32587249"
+	},
+	"item": [
+		{
+			"name": "Sign_Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log_In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"bora@gmail.com\",\n    \"password\": \"1234567891011\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_Cats",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ2Mjc1LCJleHAiOjE3MTY1NTM0NzV9.v53KSyNIWXg34r5HgkIxh0aKjJY7rdAQgWVNurvm2uc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"photo\":\"https://rawznaturalpetfood.com/wp-content/uploads/rawz-toyger-cat-appearance.jpg\",\n    \"name\":\"hausie\",\n    \"type\":\"cat\",\n    \"origin\":\"Egypt\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_Dogs",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ3NjYwLCJleHAiOjE3MTY1NTQ4NjB9.Q-veIKZ1yXv80BfavojzjxIPtvaVyKJCxNMlD9SZ99w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"photo\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgg7T0h2nMjRWdjU-1mijfEaNtum80HItA9Q&s\",\n    \"name\":\"Golden Retrieverrrrr\",\n    \"type\":\"dog\",\n    \"origin\":\"Scotland\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dogs"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_Birds",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ3NjYwLCJleHAiOjE3MTY1NTQ4NjB9.Q-veIKZ1yXv80BfavojzjxIPtvaVyKJCxNMlD9SZ99w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"photo\":\"https://www.discoverwildlife.com/animal-facts/birds/facts-about-hummingbirds\",\n    \"name\":\"Hummingbirds\",\n    \"type\":\"bird\",\n    \"origin\":\"South America\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/birds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"birds"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_All_Cats",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ2Mjc1LCJleHAiOjE3MTY1NTM0NzV9.v53KSyNIWXg34r5HgkIxh0aKjJY7rdAQgWVNurvm2uc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/cats?name=Domestic Shorthair",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Domestic Shorthair"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_All_Dogs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ3NjYwLCJleHAiOjE3MTY1NTQ4NjB9.Q-veIKZ1yXv80BfavojzjxIPtvaVyKJCxNMlD9SZ99w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/dogs?name=Golden Retrieverr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dogs"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Golden Retrieverr"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_All_Birds",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ4MzY1LCJleHAiOjE3MTY1NTU1NjV9.2DZnniX_TXchGrDj-DN9MpKz6vutVgGTXxe2mgyxdnc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/birds?name=Hummingbirds",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"birds"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Hummingbirds"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Cats",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ2Mjc1LCJleHAiOjE3MTY1NTM0NzV9.v53KSyNIWXg34r5HgkIxh0aKjJY7rdAQgWVNurvm2uc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/cats/66506f28a6966d18a2f796f3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats",
+						"66506f28a6966d18a2f796f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Dogs",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ3NjYwLCJleHAiOjE3MTY1NTQ4NjB9.Q-veIKZ1yXv80BfavojzjxIPtvaVyKJCxNMlD9SZ99w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/dogs/66507063a6966d18a2f796fb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dogs",
+						"66507063a6966d18a2f796fb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Birds",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ4NjE5LCJleHAiOjE3MTY1NTU4MTl9.7FYMdV28pa5usZt-jYGlucmN13pD8Pem0wtoHWjwQxk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/birds/66507391a6966d18a2f7971f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"birds",
+						"66507391a6966d18a2f7971f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Cats",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ2Mjc1LCJleHAiOjE3MTY1NTM0NzV9.v53KSyNIWXg34r5HgkIxh0aKjJY7rdAQgWVNurvm2uc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"photo\":\"https://rawznaturalpetfood.com/wp-content/uploads/rawz-toyger-cat-appearance.jpg\",\n    \"name\":\"hausie\",\n    \"origin\":\"Egypt\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cats/66506f20a6966d18a2f796f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats",
+						"66506f20a6966d18a2f796f1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Dogs",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ3NjYwLCJleHAiOjE3MTY1NTQ4NjB9.Q-veIKZ1yXv80BfavojzjxIPtvaVyKJCxNMlD9SZ99w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"photo\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgg7T0h2nMjRWdjU-1mijfEaNtum80HItA9Q&s\",\n    \"name\":\"Golden Retrieverrrrr\",\n    \"origin\":\"Scotland\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/dogs/66507063a6966d18a2f796fb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dogs",
+						"66507063a6966d18a2f796fb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_Birds",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJvcmFAZ21haWwuY29tIiwidXNlcklkIjoiNjY0Yzk4ZGEyNDY1NmU2NWQyZjljMjc0Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2NTQ4NjE5LCJleHAiOjE3MTY1NTU4MTl9.7FYMdV28pa5usZt-jYGlucmN13pD8Pem0wtoHWjwQxk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"photo\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-kKI_vkdeeISJ-dJ1E5fau15WC9qInJCpEQ&s\",\n    \"name\":\"Budgerigar\",\n    \"origin\":\"America\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/birds/665071b7a6966d18a2f79706",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"birds",
+						"665071b7a6966d18a2f79706"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
