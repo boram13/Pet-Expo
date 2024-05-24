@@ -2,7 +2,7 @@
 
 This project is a simple CRUD REST API application for managing pets by type (Cats, Dogs, Birds). It is build in Node.js, Express and MongoDB. The application also includes authentication features such as signup and login.
 
-` Project API Endpoints Requirements `
+## Project API Endpoints Requirements
 
 Create a new pet
 Get all pets
@@ -10,13 +10,13 @@ Update a pet
 Delete a pet
 Search pets by name for each type
 
-` Technologies `
+## Technologies
 
 Frontend: HTML, CSS, JavaScript (Bonus: ReactJS).(Included in my back-end app is only Javascript)
 Backend: Node.js, Express, M- Dotenv to save our environment variables
 ongoDB
 
-` API Endpoints `
+## API Endpoints 
 
 `Auth Routes
  -POST /auth/signup: Sign up a new user
@@ -37,7 +37,7 @@ ongoDB
 
  `For dog and bird routes will be exactly the same routes as upside for cats, but now in routs we eill replace cats keyword with dogs, in dogs routes, and will replace cats keyword with birds, in birds routes. 
 
-` Packages used `
+## Packages used 
 
 - Express and Node.js to run in the server
 - Nodemon to save the changes and make auto-run the app everytime save changes we have done in our app.
@@ -47,7 +47,7 @@ ongoDB
 - Body-parser to parse the request body
 - Express-Validator for validation in query params
 
-` Project Structe `
+## Project Structe 
 
 - `app.js`: the main entry point of application, is the file which handle all the logic behind apllication, is run top to bottom, and is the file we use to run the application(npm run start --> app.js).
 - `routes`: Contains route definitions for different entities (auth, pets, cats, dogs, birds).
@@ -63,18 +63,30 @@ ongoDB
 
 - Prerequisites: Docker, nodejs. Make sure you have them installed in your machine.
 
-- Build the Docker containers --> docker-compose build
-- Start the Docker containers --> docker-compose up
-`
+- Build the Docker containers 
+```
+docker-compose build
+```
+- Start the Docker containers 
+``` 
+docker-compose up
+```
 
 - If you want to run the backend without docker, comment the 'backend' config in docker-compose.yaml and run
-`
-nvm install
-nvm use
-npm install
-npm run start
-`
 
-`If you want to test the routes in Postman, Postman requests are available in collection.json file under the postman folder `
+```
+nvm install
+```
+```
+nvm use
+```
+```
+npm install
+```
+```
+npm run start
+```
+
+### If you want to test the routes in Postman, Postman requests are available in collection.json file under the postman folder ###
 
 
