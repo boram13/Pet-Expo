@@ -4,14 +4,13 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/auth');
-const petRoutes = require('./routes/pet');
 const catsRoutes = require('./routes/cat');
 const dogsRoutes = require('./routes/dog');
 const birdsRoutes = require('./routes/bird');
 
 
 const app = express();
-const PORT = process.env.PORT || 4002
+const PORT = process.env.PORT || 3000
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -28,7 +27,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 app.use('/auth', authRoutes);
-app.use('/pets', petRoutes);
 app.use('/cats', catsRoutes);
 app.use('/dogs', dogsRoutes);
 app.use('/birds', birdsRoutes);
@@ -42,7 +40,7 @@ app.use((error, req, res, next) => {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect('mongodb+srv://bm200000:bm200000@cluster0.h5tix4x.mongodb.net/')
+mongoose.connect(process.env.DB_URL)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('Error connecting to MongoDB:', err));
 

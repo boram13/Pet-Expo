@@ -23,7 +23,7 @@ exports.getAllBirds = async (req, res, next) => {
   const { name } = req.query;
 
   try {
-    const result = await petService.getAllPets('birds', name);
+    const result = await petService.getAllPets('bird', name);
     res.json(result);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch birds' });
