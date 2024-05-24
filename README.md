@@ -61,16 +61,13 @@ ongoDB
 
 ## How to setup
 
-`Install Docker and then run :
+- Prerequisites: Docker, nodejs. Make sure you have them installed in your machine.
 
-docker compose build
-docker compose up
+- Build the Docker containers --> docker-compose build
+- Start the Docker containers --> docker-compose up
 `
-prerequisites: Docker, nodejs
 
-<!-- TODO: check if npm instll is needed -->
-
-if you want to run the backend without docker, comment the 'backend' config in docker-compose.yaml and run
+- If you want to run the backend without docker, comment the 'backend' config in docker-compose.yaml and run
 `
 nvm install
 nvm use
