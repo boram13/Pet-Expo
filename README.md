@@ -22,13 +22,6 @@ ongoDB
  -POST /auth/signup: Sign up a new user
  -POST /auth/login: Log in an excisting user
 
-`Pet Routes
- - POST/pets: Create a new pet
- - GET/pets: Get all pets
- - PUT/pets/:id: Update a pet by ID
- - DELETE/pets/:id: Delete a pet by ID
- - GET/pets/search?name=sdfghjk: Search pets by name
-
 `Cat Routes
  - POST/cats: Create a new cat
  - GET/cats/?name=sdfghjk: Get all cats 
@@ -50,10 +43,10 @@ ongoDB
 ## Project Structe 
 
 - `app.js`: the main entry point of application, is the file which handle all the logic behind apllication, is run top to bottom, and is the file we use to run the application(npm run start --> app.js).
-- `routes`: Contains route definitions for different entities (auth, pets, cats, dogs, birds).
-- `controllers`: Contains controller ogic to handle requests
+- `routes`: Contains route definitions for different entities (auth, cats, dogs, birds).
+- `controllers`: Contains controller logic to handle requests
 - `services`: Contains the logic in server and also here we interact with database, in our case with MongoDB.
-- `models`: Defines data schema for user and pets, in our app are Monfoose models.
+- `models`: Defines data schema for user and pets, in our app are Mongoose models.
 - `middleware`: Contains authentication middleware, I have used jwt token in it, which I use to protect routes.If you are not logged in, you can't do any action in our app.
 - Also have included an error handling middleware in entrypoint.
 
